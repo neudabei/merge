@@ -1,0 +1,23 @@
+<ul class="nav">
+  <li>
+    <%= link_to "Home", root_path, :class => 'brand' %> 
+  </li>
+  <li>
+    <%= link_to "Register", root_path, :class => 'brand' %> 
+  </li>
+  <li>
+    <%= link_to "Upload", upload_path, :class => 'brand' %>
+  </li>
+  
+  <% if !logged_in? %>
+  <li>
+    <%= link_to "Login", login_path, :class => 'brand' %>
+  </li>
+  <% else %>
+  <li>
+    <%= link_to "Logout", logout_path, :class => 'brand' %>
+  </li>
+  <% end %>
+</ul>
+
+

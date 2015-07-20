@@ -1,0 +1,25 @@
+
+
+
+<%= form_for(@user, :html => { :multipart => true }) do |f| %>
+   <div class="field">
+     <%= f.label :email %><br>
+     <%= f.text_field :email %>
+   </div>
+
+    <div class="field">
+     <%= f.label :password %><br>
+     <%= f.password_field :password %>
+   </div>
+
+   <%= f.fields_for :spreadsheets do |s| %>
+     <div class="field">
+       <%= s.label :csv %><br>
+       <%= s.file_field :csv, :multiple => true, name: "spreadsheets[csv][]" %>
+     </div>
+   <% end %>
+
+   <div class="actions">
+     <%= f.submit %>
+   </div>
+<% end %>

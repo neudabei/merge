@@ -1,0 +1,25 @@
+<%= form_for(@spreadsheet) do |f| %>
+  <% if @spreadsheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spreadsheet.errors.count, "error") %> prohibited this spreadsheet from being saved:</h2>
+
+      <ul>
+      <% @spreadsheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :csv %><br>
+    <%= f.text_field :csv %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

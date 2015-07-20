@@ -1,0 +1,23 @@
+Upload template (show.html.erb)
+
+
+You have uploaded these two files 
+<br>
+
+<ul>
+<% @user.spreadsheets.each do |us| %>
+ <li> <%= us.csv %> </li>
+<% end %>
+</ul>
+
+<br>
+Now click here to merge them
+
+<%= link_to "merged files", merge_path, :class => 'brand' %>
+
+# send to new route and in the action perform csv merge. on rendered template offer download link to new merged csv result
+
+
+
+
+

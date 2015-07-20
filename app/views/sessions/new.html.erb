@@ -1,0 +1,17 @@
+<%= form_tag '/login', class: 'new_user' do %>
+  <h2 class="form-signin-heading">Login to your account.</h2>
+
+<!--   <label for="email" class="form-control">Your email address</label>
+ -->    <%= text_field_tag :email %>
+
+<!--   <label for="password" class="form-control">Your password</label>
+ -->    <%= password_field_tag :password %>
+  <br>
+  <%= submit_tag 'Login', class: "btn btn-lg btn-primary" %>
+<% end %>
+
+
+<!-- http://josephndungu.com/tutorials/ajax-file-upload-with-dropezonejs-and-paperclip-rails
+
+
+http://josephndungu.com/tutorials/managing-env-variables-in-rails -->

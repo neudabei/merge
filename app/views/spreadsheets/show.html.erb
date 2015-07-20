@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @spreadsheet.user_id %>
+</p>
+
+<p>
+  <strong>Csv:</strong>
+  <%= @spreadsheet.csv %>
+</p>
+
+<%= link_to 'Edit', edit_spreadsheet_path(@spreadsheet) %> |
+<%= link_to 'Back', spreadsheets_path %>
