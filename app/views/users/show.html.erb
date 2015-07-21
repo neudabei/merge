@@ -1,14 +1,25 @@
-Upload template (show.html.erb)
+<h2>Here is the resulting file:</h2>
+<br>
+<%= link_to "public/uploads/spreadsheet/csv/#{@user.spreadsheets.first.user_id}/output.csv",  %>
 
-
-You have uploaded these two files 
+<br>
+<br>
+<h4>These were the files you uploaded:</h4>
 <br>
 
+
 <ul>
-<% @user.spreadsheets.each do |us| %>
- <li> <%= us.csv %> </li>
-<% end %>
+  <% @user.spreadsheets.each do |us| %>
+    <li> <%= us.csv %> </li>
+  <% end %>
 </ul>
+
+
+
+
+
+
+
 
 <br>
 Now click here to merge them

@@ -1,25 +1,28 @@
 
 
 
-<%= form_for(@user, :html => { :multipart => true }) do |f| %>
+<%= form_for(@user, :html => { :multipart => true }, class: 'form-signin') do |f| %>
+
+  <h2 class="form-signin-heading">Add your email and the files to merge.</h2>
+
    <div class="field">
      <%= f.label :email %><br>
-     <%= f.text_field :email %>
+     <%= f.text_field :email, class: 'form-control', placeholder: 'Enter your email'  %>
    </div>
 
     <div class="field">
      <%= f.label :password %><br>
-     <%= f.password_field :password %>
+     <%= f.password_field :password, class: 'form-control', placeholder: 'Choose a password' %>
    </div>
 
    <%= f.fields_for :spreadsheets do |s| %>
      <div class="field">
-       <%= s.label :csv %><br>
-       <%= s.file_field :csv, :multiple => true, name: "spreadsheets[csv][]" %>
+       <%= s.label :Drag_your_files_here %><br>
+       <%= s.file_field :csv, :multiple => true, name: "spreadsheets[csv][]", class: 'form-control' %>
      </div>
    <% end %>
 
    <div class="actions">
-     <%= f.submit %>
+     <%= f.submit "Merge it!", class: "btn btn-lg btn-primary btn-block" %>
    </div>
 <% end %>
