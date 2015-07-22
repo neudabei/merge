@@ -1,6 +1,6 @@
 <h2>Here is the resulting file:</h2>
 <br>
-<%= link_to "your output", "public/uploads/spreadsheet/csv/#{@user.spreadsheets.first.user_id}/output.csv" %>
+<%= link_to "your output", "uploads/spreadsheet/csv/#{@user.spreadsheets.first.user_id}/output.csv" %>
 
 <br>
 <br>
@@ -10,7 +10,7 @@
 
 <ul>
   <% @user.spreadsheets.each do |us| %>
-    <li> <%= us.csv %> </li>
+    <li> <%= us.csv_identifier %> </li>
   <% end %>
 </ul>
 

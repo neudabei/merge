@@ -17,6 +17,7 @@
 /tmp
 
 /public/uploads
+todo.md
 
 # Ignore ENV files
 application.yml
