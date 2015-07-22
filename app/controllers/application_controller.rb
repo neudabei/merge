@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
 
     master = CSV.read("#{path_to_folder}/master.csv") # Reads in master # -> datei.csv.current_path didn't get the actual file
     master.each {|each| each.push('')} # Adds another column to all rows
-    Dir.glob("#{path_to_folder}/*.csv").each do |each| #Goes thru all csv files
+    Dir.glob("#{path_to_folder}/status.csv").each do |each| #Goes thru all csv files
       next if each == 'master.csv' # skips the master csv file
       file = CSV.read(each) # Reads in each file
       file.each do |line| #Goes thru each line of the file
