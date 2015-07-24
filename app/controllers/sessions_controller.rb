@@ -13,9 +13,11 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    User.find(session[:user_id]).destroy # delete user who logged out
     session[:user_id] = nil
-    flash[:notice] = "You've logged out."
+    flash[:notice] = "You've logged out. Go ahead and merge more files if you want."
     redirect_to root_path
+
   end
 
 end

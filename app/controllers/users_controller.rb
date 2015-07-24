@@ -20,8 +20,8 @@ class UsersController < ApplicationController
       params[:spreadsheets]['csv'].each do |c|
         @spreadsheet = @user.spreadsheets.create(:csv => c)
       end
-      flash[:notice] = "You are registered."
-      redirect_to upload_path 
+      flash[:notice] = "Your files have been merged!"
+      redirect_to show_path 
 
     else
       render :new
@@ -33,9 +33,6 @@ class UsersController < ApplicationController
   end
 
   def help
-  end
-
-  def files
   end
 
   def user_params

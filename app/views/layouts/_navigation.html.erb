@@ -1,29 +1,19 @@
 <ol class="breadcrumb">
   <li><%= link_to "Home", root_path%></li>
   <li><%= link_to "Help", help_path%></li>
-</ol>
-
-
-<!-- <ul class="nav">
-  <li>
-    <%= link_to "Home", root_path, :class => 'brand' %> 
-  </li>
-  <li>
-    <%= link_to "Register", root_path, :class => 'brand' %> 
-  </li>
-  <li>
-    <%= link_to "Upload", upload_path, :class => 'brand' %>
-  </li>
-  
-  <% if !logged_in? %>
-  <li>
-    <%= link_to "Login", login_path, :class => 'brand' %>
-  </li>
+   <% if !logged_in? %>
   <% else %>
   <li>
-    <%= link_to "Logout", logout_path, :class => 'brand' %>
+    <%= link_to "Logout", logout_path %>
   </li>
   <% end %>
-</ul> -->
+
+  <% if !logged_in? %>
+  <% else %>
+  <li><%= link_to "New Merge", logout_path %></li>
+  <% end %>
 
 
+  
+
+</ol>
