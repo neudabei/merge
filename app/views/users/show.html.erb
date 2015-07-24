@@ -1,34 +1,21 @@
-<h2>Here is the resulting file:</h2>
-<br>
-<%= link_to "your output", "uploads/spreadsheet/csv/#{@user.spreadsheets.first.user_id}/output.csv" %>
+<div class="page-header">
+  <h1>Your files were merged <small>and the result is ready for downloading</small></h1>
+</div>
 
 <br>
-<br>
-<h4>These were the files you uploaded:</h4>
-<br>
-
-
-<ul>
-  <% @user.spreadsheets.each do |us| %>
-    <li> <%= us.csv_identifier %> </li>
-  <% end %>
+<h4>This is your merged file</h4>
+<ul class="list-group">
+  <li class="list-group-item"> <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> <%= link_to "Download the merged spreadsheet", "uploads/spreadsheet/csv/#{@user.spreadsheets.first.user_id}/output.csv" %> </li>
 </ul>
 
 
 
-
-
-
-
-
 <br>
-Now click here to merge them
+<h4>These were the files you uploaded:</h4>
 
-<%= link_to "merged files", merge_path, :class => 'brand' %>
-
-# send to new route and in the action perform csv merge. on rendered template offer download link to new merged csv result
-
-
-
-
+<ul class="list-group">
+  <% @user.spreadsheets.each do |us| %>
+    <li class="list-group-item"> <%= us.csv_identifier %> </li>
+  <% end %>
+</ul>
 

@@ -1,28 +1,37 @@
+<div class="page-header">
+  <h1>Upload spreadsheets as .csv files <small>and download a merged version</small></h1>
+</div>
 
-
+<br>
+<br>
+<br>
 
 <%= form_for(@user, :html => { :multipart => true }, class: 'form-signin') do |f| %>
 
-  <h2 class="form-signin-heading">Add your email and the files to merge.</h2>
-
+<!--   <h2 class="form-signin-heading">Add your email and the files to merge.</h2>
+ -->
    <div class="field">
      <%= f.label :email %><br>
      <%= f.text_field :email, class: 'form-control', placeholder: 'Enter your email'  %>
    </div>
-
+   <br>
     <div class="field">
      <%= f.label :password %><br>
      <%= f.password_field :password, class: 'form-control', placeholder: 'Choose a password' %>
    </div>
-
+   <br>
    <%= f.fields_for :spreadsheets do |s| %>
      <div class="field">
-       <%= s.label :Drag_your_files_here %><br>
+       <%= s.label :Drag_your_files_here %> <a href="help"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Read more about how this works in our help section."></span></a><br>
        <%= s.file_field :csv, :multiple => true, name: "spreadsheets[csv][]", class: 'form-control' %>
      </div>
    <% end %>
-
+   <br>
    <div class="actions">
-     <%= f.submit "Merge it!", class: "btn btn-lg btn-primary btn-block" %>
+     <%= f.submit "Merge files!", class: "btn btn-lg btn-primary btn-block" %>
    </div>
 <% end %>
+
+
+
+

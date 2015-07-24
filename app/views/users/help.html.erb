@@ -1,0 +1,148 @@
+<div class="page-header">
+  <h1>Help <small>Find out more about how this app works</small></h1>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+
+  <dl>
+    <dt>What does this app do?</dt>
+    <dd>This simple app takes spreadsheets in the .csv format and merges them into one spreadsheet. This can be useful if you have a spreadsheet with customer data and another spreadsheet with additional information (i.e. after sending them an email marketing campaign). To keep all your data in one spreadsheet you can use this app to merge the files instead of doing this manually or writing an Excel script. 
+    </dd>
+    <br>
+
+
+
+      <div class="well well-lg">
+
+        <table class="table table-bordered">
+          <caption>master.csv</caption>
+          <thead>
+            <tr>
+              <th>emails</th>
+              <th>name</th>
+              <th>address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>email1@domain.com</td>
+              <td>name1</td>
+              <td>address1</td>
+            </tr>
+            <tr>
+              <td>email2@domain.com</td>
+              <td>name2</td>
+              <td>address2</td>
+            </tr>
+            <tr>
+              <td>email3@domain.com</td>
+              <td>name3</td>
+              <td>address3</td>
+            </tr>
+          </tbody>
+        </table>
+
+       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+
+        <table class="table table-bordered">
+          <caption>status.csv</caption>
+          <thead>
+            <tr>
+              <th>emails</th>
+              <th>status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>email1@domain.com</td>
+              <td>active</td>
+            </tr>
+            <tr>
+              <td>email2@domain.com</td>
+              <td>active</td>
+            </tr>
+            <tr>
+              <td>email3@domain.com</td>
+              <td>inactive</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+
+      <div class="well well-lg">
+
+        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+
+
+        <table class="table table-bordered">
+          <caption>output.csv</caption>
+          <thead>
+            <tr>
+              <th>emails</th>
+              <th>name</th>
+              <th>address</th>
+              <th>status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>email1@domain.com</td>
+              <td>name1</td>
+              <td>address1</td>
+              <td>active</td>
+            </tr>
+            <tr>
+              <td>email2@domain.com</td>
+              <td>name2</td>
+              <td>address2</td>
+              <td>active</td>
+            </tr>
+            <tr>
+              <td>email3@domain.com</td>
+              <td>name3</td>
+              <td>address3</td>
+              <td>inactive</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+
+    <br>
+    <dt>How does it work?</dt>
+    <dd>
+    This app takes a master.csv spreadsheet and merges it with any number of addtional .csv spreadsheets you upload. 
+      <ul>
+        <li>Make sure your files are in the .csv format. Microsoft Excel and Google Spreadsheets let you export your files as .csv files. </li>
+        <li>Make sure your main file is called master.csv The other files you want to merge with your master can have any name you want.</li>
+        <li>Your files both need to have a first column with the same title (e.g. email). This column serves as the key to merge columns into the correct rows. 
+        See our example files. Feel free to <a href = "https://www.dropbox.com/sh/crf1uu2k74jq6uy/AABC4s1eXKQWkMFafXxAx_zSa?dl=0">download the example files</a> and use them.</li>
+      </ul> 
+    </dd>
+
+    <br>
+    <dt>Is my data safe?</dt>
+    <dd>Your data is merged and provided for download. It's not stored and data is deleted every 30 minutes. This whole project is open source and you can view the source code here: <a href = "http://github.com/neudabei/merge">Source Code on GitHub</a>
+    </dd>
+
+    <br>
+    <dt>Is it free?</dt>
+    <dd>Yes
+    </dd>
+
+    <br>
+    <dt>Contact</dt>
+    <dd>You can get in touch here if you have questions or comments: <a href = "mailto:rschultzejenaBEIgmailPUNKTcom" onclick = "this.href=this.href.replace(/BEI/,'&#64;').replace(/PUNKT/,'&#46;')">email</a>
+    </dd>
+
+  </dl>
+
+  </div>
+  <div class="col-md-4">
+    
+  </div>
+</div>

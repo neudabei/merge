@@ -7,29 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <header>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
-        </div>
-      </div>
-    </div>
-  </header>
-
- <div id="main" role="main">
+  <%= render 'layouts/navigation' %>
   <div class="container">
-     <div class="row">
-      <div class="span12">
-        <%= render 'layouts/messages' %>
-        <%= yield %>
-      </div>
+    <div class="container">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
     </div>
-    <footer>
-    </footer>
-  </div> <!--! end of .container -->
-</div> <!--! end of #main -->
-  
+  </div> <!-- /container -->  
 </body>
 </html>

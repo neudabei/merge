@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :require_user, except: [:create, :new]
+  before_action :require_same_user, except: [:create, :new, :help, :show]
 
   def show
     @user = current_user
@@ -32,8 +32,21 @@ class UsersController < ApplicationController
 
   end
 
+  def help
+  end
+
+  def files
+  end
+
   def user_params
     params.require(:user).permit(:email, :password, spreadsheets_attributes: [:id, :user_id, :csv])
+  end
+
+  def require_same_user
+    if current_user != @user
+      flash[:error] = "You are not allowed to perform this action"
+      redirect_to root_path
+    end
   end
 
 end

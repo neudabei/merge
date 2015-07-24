@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
   get '/upload', to: 'users#show'
 
+  get '/help', to: 'users#help'
+
+  get '/fileuploads/*other', to: 'users#files'
+
 end
