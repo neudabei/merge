@@ -12,6 +12,10 @@
     margin: 0;
   }
 
+  ul {
+    text-align: left;
+  }
+
   div.dialog {
     width: 95%;
     max-width: 33em;
@@ -60,7 +64,13 @@
     <div>
       <h1>We're sorry, but something went wrong.</h1>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>Read the <a href="https://ancient-sea-8823.herokuapp.com/help">help section</a> if you encounter problems.</p>
+    <ul>
+    <li>Make sure you upload at least one file called master.csv</li>
+    <li>Make sure that all your files have a common primary key (the first column should have the same title and the same values for all rows.)</li>
+
+    </ul>
+   
   </div>
 </body>
 </html>

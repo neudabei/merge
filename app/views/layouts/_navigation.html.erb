@@ -1,6 +1,7 @@
 <ol class="breadcrumb">
   <li><%= link_to "Home", root_path%></li>
   <li><%= link_to "Help", help_path%></li>
+   
    <% if !logged_in? %>
   <% else %>
   <li>
@@ -12,8 +13,4 @@
   <% else %>
   <li><%= link_to "New Merge", logout_path %></li>
   <% end %>
-
-
-  
-
 </ol>
